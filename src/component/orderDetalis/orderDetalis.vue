@@ -122,7 +122,6 @@ export default {
         if (!this.changeState) {
           this.changeState = !this.changeState
         }
-        console.log(this.changeState)
       },
       deep: true
     }

@@ -12,20 +12,20 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://127.0.0.1:8080',
+        target: 'http://47.102.215.151:5000',
         pathRewrite: {
           '^/api': '/static/mock'
         }
       },
       '/data': {
-        target: 'http://127.0.0.1:3000',
+        target: 'http://47.102.215.151:5000',
         changeOrigin: true,
         pathRewrite: {
           '^/data': ''
         }
       },
       '/socket.io': {
-        target: 'http://127.0.0.1:3000', // target host
+        target: 'http://47.102.215.151:5000', // target host
         changeOrigin: true, // needed for virtual hosted sites
         logLevel: 'debug'
       }

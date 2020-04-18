@@ -119,7 +119,6 @@ export default {
       return value
     },
     receiveInformation (data) {
-      console.log(data)
       let value = this.judgeInformationClass(data, this.bulleList.length)
       this.bulleList.push(value)
     },
@@ -133,7 +132,6 @@ export default {
           objectUserId: this.$route.params.objectUserId
         }
       }).then(resulte => {
-        console.log(resulte)
         if (resulte !== null) {
           this.inputDialogueBoxContentData = resulte
           this.inputDialogueBoxContentData.forEach(element => {

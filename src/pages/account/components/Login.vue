@@ -46,8 +46,8 @@ export default {
   data () {
     return {
       loginForm: {
-        account: '',
-        password: ''
+        account: '15364024159',
+        password: '12346'
       }
     }
   },
@@ -89,7 +89,6 @@ export default {
   .login-box
     height: --window-height
     width: --window-width
-    background-image: linear-gradient(#423b3b69, #000000);
     display: flex
     justify-content: center
     flex-wrap: wrap
@@ -106,16 +105,16 @@ export default {
         align-items: center
         justify-content: flex-start
         .cls
-          width: .5rem
-          height: .5rem
+          width: .8rem
+          height: .8rem
+          margin: .3rem
           padding-right: .1rem
-          line-height: .5rem
-          font-size: .4rem
+          line-height: .8rem
+          font-size: .5rem
           font-weight: 600
-          border: .05rem solid white
           border-radius: .2rem
           background: white
-          color:white
+          text-align: center
           .iconfont
             font-size: .5rem
             font-weight: 600

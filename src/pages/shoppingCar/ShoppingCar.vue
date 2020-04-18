@@ -30,7 +30,6 @@ export default {
     getCityInfo () {
       this.$store.dispatch('user/getUserCommodityInfo', '/getUserShoppingCar')
         .then(resulte => {
-          console.log(resulte)
           if (resulte) {
             resulte.forEach(element => {
               this.$set(element, 'state', true)

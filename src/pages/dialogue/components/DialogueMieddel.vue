@@ -46,7 +46,6 @@ export default {
       handler (newValue) {
         this.dialogueContentAll = newValue
         this.dialogueContent = this.dialogueContentAll
-        console.log(this.dialogueContent)
       }
     }
   },

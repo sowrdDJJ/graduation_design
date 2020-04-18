@@ -125,7 +125,6 @@ export default {
     ...mapGetters(['currUserData'])
   },
   mounted () {
-    console.log(this.$route.params)
     this.getOrderPay()
     this.scroll = new Bscroll(this.$refs.orderPayShow, { mouseWheel: true, click: true, tap: true })
   },

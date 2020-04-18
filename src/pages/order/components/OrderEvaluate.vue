@@ -67,7 +67,6 @@ export default {
     ...mapGetters(['currUserData'])
   },
   mounted () {
-    console.log(this.$route.params)
     this.getOrderEvaluate()
     this.scroll = new Bscroll(this.$refs.orderEvaluateShow, { mouseWheel: true, click: true, tap: true })
   },

@@ -89,13 +89,15 @@ export default {
       })
     }
   },
+  watch: {
+    $route (newVal) {
+      this.judgeMoveTag(this.$route.path)
+    }
+  },
   computed: {
     ...mapGetters(['token'])
   },
   mounted () {
-    this.judgeMoveTag(this.$route.path)
-  },
-  activated () {
     this.judgeMoveTag(this.$route.path)
   },
   deactivated () {
@@ -140,5 +142,5 @@ export default {
       padding-top: .1rem
       height: 1.1rem
       border-radius: .1rem
-      background: $bgColor
+      background: $bgColorFourth
 </style>

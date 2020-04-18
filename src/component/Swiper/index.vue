@@ -32,10 +32,8 @@ export default {
   },
   methods: {
     getInformation () {
-      console.log(this.list)
       this.btnWidth = this.list.length * 0.2 + 0.4
       this.scrollWidth = this.list.length * document.getElementsByClassName('swiper')[0].clientWidth
-      console.log(document.getElementsByClassName('swiper')[0].clientWidth)
     }
   },
   mounted () {

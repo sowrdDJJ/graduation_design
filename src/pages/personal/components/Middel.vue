@@ -2,7 +2,7 @@
   <div>
      <div class="personal-middel">
       <div class="user-head">
-        <img class="user-head-img" :src="`/data/${currUserDataUser_Img}`" alt="头像">
+        <img class="user-head-img" :src="`${currUserDataUser_Img}`" alt="头像">
       </div>
       <div class="presonal-order">
         <router-link tag="div" to='/user/Order' class="presonal-order-tag">

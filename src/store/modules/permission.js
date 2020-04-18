@@ -38,7 +38,6 @@ const actions = {
   generateRoutes ({commit}, roles) {
     return new Promise(resolve => {
       let accessedRoutes
-      console.log(typeof (roles))
       if (roles.includes('user')) {
         accessedRoutes = asyncRoutes || []
       } else {

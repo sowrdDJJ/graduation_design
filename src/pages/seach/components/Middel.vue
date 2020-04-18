@@ -33,13 +33,11 @@ export default {
   watch: {
     seachList () {
       this.seachBoxHeight = this.seachList.length / 2 * 4
-      console.log(1)
     }
   },
   created () {
     if (this.currUserData) {
       this.userState = true
-      console.log(this.currUserData)
     } else {
       this.userState = false
     }
@@ -49,7 +47,6 @@ export default {
     this.scroll = new Bscroll(this.$refs.seachContentBox, { mouseWheel: true, click: true, tap: true })
   },
   befordestroy () {
-    console.log('销毁')
     this.userState = false
   },
   methods: {
@@ -68,14 +65,12 @@ export default {
       })
     },
     inputData (res) {
-      console.log(res.data)
       this.seachKeyWord = this.$route.params.seachKeyWord
       if (res.data) {
         res = res.data
         if (res.ret) {
           const data = res.data
           this.seachList = data
-          console.log(this.seachList)
         }
       } else {
         window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')

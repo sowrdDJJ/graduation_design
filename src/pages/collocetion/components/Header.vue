@@ -40,7 +40,6 @@ export default {
         message: '是否删除所选内容'
       }).then(() => {
         // on confirm
-        console.log(this.commodityStateList)
         this.$emit('cleaCommdityStateData', this.commodityStateList)
       }).catch(() => {
         // on cancel

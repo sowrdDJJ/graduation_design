@@ -201,7 +201,7 @@ export default {
         title: '是否登出'
       }).then(() => {
         this.$toast.success('成功')
-        this.$store.commit('clearCurrUserData', null)
+        this.$store.dispatch('user/resetToken', null)
         this.personalData = {
           'user_Img': null,
           'user_Id': null,
@@ -259,8 +259,7 @@ export default {
       this.$store.dispatch('user/getInfo')
         .then(response => {
           this.personalData = response
-          this.fileList[0].url = `/data/${this.personalData.user_Img}`
-          console.log(this.personalData)
+          this.fileList[0].url = `/${this.personalData.user_Img}`
           Bus.$emit('updateUserHeadImg', this.personalData.user_Img)
         })
         .catch(err => {

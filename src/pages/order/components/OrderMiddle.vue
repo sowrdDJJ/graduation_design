@@ -59,7 +59,6 @@ export default {
     this.initialOrderNavgation()
   },
   activated () {
-    console.log(this.transtionOrderNavigationValue)
     this.orderNavigationShowList = this.transtionOrderNavigationValue
   }
 }

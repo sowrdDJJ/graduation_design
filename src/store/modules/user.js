@@ -14,7 +14,6 @@ const mutations = {
   },
   SET_ROLES (state, roles) {
     state.roles = roles
-    console.log(state.roles)
   },
   UPDATA_CURR_USERDATA (state, currData) {
     state.currUserData = currData
@@ -32,12 +31,10 @@ const mutations = {
 
 const actions = {
   obtionCurrUserData (mutation, newUserData) {
-    console.log(newUserData)
     return new Promise((resolve, reject) => {
       if (newUserData) {
         // sessionStorage.setItem('currUserData', JSON.stringify(newUserData))
         mutation.commit('UPDATA_CURR_USERDATA', newUserData)
-        console.log(newUserData)
         resolve()
       } else {
         // eslint-disable-next-line prefer-promise-reject-errors
@@ -48,7 +45,6 @@ const actions = {
   orderList (mutatation, newUserData) {
     sessionStorage.setItem('currOrderList', JSON.stringify(newUserData))
     mutatation.commit('UPDATA_CURR_DATAORDER', newUserData)
-    console.log(newUserData)
   },
   login ({ commit }, userInfo) {
     const { account, password } = userInfo
@@ -72,7 +68,6 @@ const actions = {
           // eslint-disable-next-line prefer-promise-reject-errors
           reject('验证失效，请重新登录')
         }
-        console.log(data)
         const { roles } = data[0]
         if (!roles || roles.length <= 0) {
           // eslint-disable-next-line prefer-promise-reject-errors
@@ -96,10 +91,8 @@ const actions = {
   },
   getUserOrderInfo ({state}, data) {
     const { params = {}, url = '' } = data
-    console.log(params)
     return new Promise((resolve, reject) => {
       getUserOrderInfo(state.token, url, params).then(resulte => {
-        console.log(resulte)
         const {data} = resulte
         resolve(data)
       }).catch(error => {
@@ -131,7 +124,6 @@ const actions = {
   },
   emitUserData ({commit}, userData) {
     return new Promise((resolve, reject) => {
-      console.log(userData)
       emitUserData(userData).then(responnse => {
         const { data } = responnse
         if (!data) {

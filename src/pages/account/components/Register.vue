@@ -61,7 +61,7 @@ export default {
   methods: {
     submission () {
       this.$store.dispatch('user/postUserOrderInfo', {
-        url: 'http://192.168.43.102:3000/postUserInformation',
+        url: '/postUserInformation',
         params: {
           data: this.registerInformtion
         }
@@ -93,7 +93,6 @@ export default {
   .register-box
     height: --window-height
     width: --window-width
-    background-image: linear-gradient(#423b3b69, #000000);
     display: flex
     justify-content: center
     flex-wrap: wrap
@@ -104,16 +103,16 @@ export default {
         width: --window-width
         height: --header-height
         .cls
-          width: .5rem
-          height: .5rem
+          width: .8rem
+          height: .8rem
           margin: .3rem
           padding-right: .1rem
-          line-height: .5rem
+          line-height: .8rem
           font-size: .5rem
           font-weight: 600
-          border: .05rem solid white
           border-radius: .2rem
           background: white
+          text-align: center
           color:white
           .iconfont
             font-size: .5rem

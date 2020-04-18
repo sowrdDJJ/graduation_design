@@ -81,7 +81,6 @@ export default {
     ...mapGetters(['currUserData'])
   },
   mounted () {
-    console.log(this.$route.params)
     this.getOrderReceiv()
     this.scroll = new Bscroll(this.$refs.orderReceivShow, { mouseWheel: true, click: true, tap: true })
   },

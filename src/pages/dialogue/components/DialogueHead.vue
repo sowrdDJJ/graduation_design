@@ -1,7 +1,7 @@
 <template>
   <div class="dialogueHead-box">
       <div class="dialogueHead-userHeadImg">
-        <img class="userHeadImg" :src="`/data/${userHeadImg}`">
+        <img class="userHeadImg" :src="`/${userHeadImg}`">
       </div>
       <div class="search-input">
         <span class="iconfont header-iconfont">&#xe8bb;</span>

@@ -51,7 +51,6 @@ export default {
       })
     },
     getCommodityClass (commodityClass) {
-      console.log(commodityClass)
       mutations.setCommodityClass(commodityClass)
       this.$router.push('/user/CollocetionPage')
     }

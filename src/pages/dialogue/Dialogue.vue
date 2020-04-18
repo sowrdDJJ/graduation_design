@@ -33,7 +33,6 @@ export default {
       this.$store.dispatch('user/getUserOrderInfo', {
         url: '/getUserDialogues'
       }).then(resulte => {
-        console.log(resulte)
         this.dialogueContentAll = resulte
       }).catch(error => {
         this.$toast.fail('请稍后...')

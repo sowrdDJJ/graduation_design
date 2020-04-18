@@ -40,7 +40,6 @@ export default {
         }
       }).then(resulte => {
         if (resulte) {
-          console.log(resulte)
           this.privateInformations = resulte[0]
         } else {
           this.$router.go(-1)
@@ -55,7 +54,6 @@ export default {
     ...mapGetters(['currUserData'])
   },
   mounted () {
-    console.log(this.$route.params.selectAccountNumber)
     this.getPrivateInformations()
   }
 }

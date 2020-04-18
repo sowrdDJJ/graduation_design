@@ -26,11 +26,9 @@ export default {
   },
   methods: {
     setDate (e) {
-      console.log(e)
       this.dateTiem.year = this.currentDate.getFullYear()
       this.dateTiem.month = this.currentDate.getMonth() + 1
       this.dateTiem.day = this.currentDate.getDate()
-      console.log(this.dateTiem)
       this.$emit('setDate', this.dateTiem)
     },
     cancelDate () {

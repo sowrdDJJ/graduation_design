@@ -29,7 +29,7 @@ Vue.use(Vant)
 Vue.use(VueRouter)
 Vue.use(new VueSocketio({
   debug: true,
-  connection: socketio('http://localhost:3000/'),
+  connection: socketio('http://47.102.215.151:5000'),
   transports: ['websocket']
 }))
 

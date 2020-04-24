@@ -32,7 +32,7 @@ export default {
   },
   watch: {
     seachList () {
-      this.seachBoxHeight = this.seachList.length / 2 * 4
+      this.seachBoxHeight = this.seachList.length / 2 * 4.7 + 4
     }
   },
   created () {
@@ -60,7 +60,7 @@ export default {
         if (resulte) {
           this.seachList = resulte
         } else {
-          window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+          this.$router.push('/')
         }
       })
     },

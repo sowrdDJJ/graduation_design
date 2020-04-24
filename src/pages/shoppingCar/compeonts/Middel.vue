@@ -5,7 +5,7 @@
         <ul>
             <li class="shoppingCar-commodity-T" v-for="item of commodityList" :key="item.shoppingCar_Id" >
               <div class="shoppingCar-middel-commodity" >
-                <router-link  :to="`/personal/user=`+(currUserId) +`/commodityId=`+item.id">
+                <router-link  :to="`/commodity/commodityId=${item.id}`">
                   <div class="shoppingCar-middel-commodity-img">
                       <img class="img" :src="item.imgUrl" >
                   </div>

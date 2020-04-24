@@ -38,16 +38,16 @@ export default {
     box-sizing: border-box
     .out
       box-shadow: 1px 1px .2rem grey
-      width: .5rem
-      height: .5rem
+      width: .8rem
+      height: .8rem
       padding-right: .1rem
-      line-height: .5rem
+      line-height: .8rem
       font-size: .4rem
       font-weight: 600
-      border: .05rem solid white
       border-radius: .2rem
       background: white
       color:white
+      text-align: center
       .iconfont
         font-size: .5rem
         font-weight: 600

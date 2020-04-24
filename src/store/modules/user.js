@@ -64,6 +64,7 @@ const actions = {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
         const { data } = response
+        console.log(data)
         if (!data) {
           // eslint-disable-next-line prefer-promise-reject-errors
           reject('验证失效，请重新登录')

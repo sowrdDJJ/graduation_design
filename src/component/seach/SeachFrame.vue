@@ -10,7 +10,9 @@
               <transition enter-active-class="animated slideInLeft" leave-active-class="animated slideOutRight" :duration="400">
                 <div class="search-real-content" v-show="keyWord" ref="search">
                   <ul>
-                    <li class="search-real-content-li" v-show="hasNodata" v-text="'无数据'" :key="list.length"></li>
+                    <router-link :to="`/seachFrame/commodity/keyWord=${keyWord}`" class="search-real-content-li-a"  :key="list.length">
+                    <li class="search-real-content-li" v-show="hasNodata" v-text="keyWord"></li>
+                    </router-link>
                   <transition-group enter-active-class="animated zoomIn" leave-active-class="animated zoomOut" :duration="400">
                     <router-link :to="`/seachFrame/commodity/keyWord=${item.name}`" class="search-real-content-li-a" v-for="item of list" :key="item.id">
                     <li class="search-real-content-li"  @click="headerCommodityClick(item.name)">
@@ -36,7 +38,7 @@
 <script>
 import Bus from 'bus'
 import Bscroll from 'better-scroll'
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'SeachFrame',
   data () {
@@ -87,16 +89,16 @@ export default {
     obtainLetter (letter) {
       this.keyWord = letter
     },
-    getSeachKeyList () {
-      axios.get('/api/keyStore.json')
-        .then(this.inputSeachKeyList)
-    },
-    inputSeachKeyList (res) {
-      res = res.data
-      if (res.ret && res.data) {
-        this.commodityList = res.data
-      }
-    },
+    // getSeachKeyList () {
+    //   axios.get('/api/keyStore.json')
+    //     .then(this.inputSeachKeyList)
+    // },
+    // inputSeachKeyList (res) {
+    //   res = res.data
+    //   if (res.ret && res.data) {
+    //     this.commodityList = res.data
+    //   }
+    // },
     keyWordTranmisstion (val) {
       this.keyWord = val
       this.$refs.keyWord.focus()
@@ -106,7 +108,7 @@ export default {
     Bus.$on('commodityNameLetter', this.obtainLetter)
   },
   mounted () {
-    this.getSeachKeyList()
+    // this.getSeachKeyList()
   },
   updated () {
     this.scroll = new Bscroll(this.$refs.search, { mouseWheel: true, click: true, tap: true })

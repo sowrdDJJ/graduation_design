@@ -57,12 +57,14 @@ export default {
   },
   watch: {
     collection () {
-      let list = this.collection.map((e) => {
-        return e.commodity_Class
-      })
-      list = new Set(list)
-      for (let i of list) {
-        this.commodityClass.push(i)
+      if (this.collection && this.collection.length !== 0) {
+        let list = this.collection.map((e) => {
+          return e.commodity_Class
+        })
+        list = new Set(list)
+        for (let i of list) {
+          this.commodityClass.push(i)
+        }
       }
       this.setCommodityClass()
     },

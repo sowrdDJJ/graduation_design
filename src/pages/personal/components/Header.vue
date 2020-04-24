@@ -259,7 +259,7 @@ export default {
       this.$store.dispatch('user/getInfo')
         .then(response => {
           this.personalData = response
-          this.fileList[0].url = `/${this.personalData.user_Img}`
+          this.fileList[0].url = `http://47.102.215.151:5000/${this.personalData.user_Img}`
           Bus.$emit('updateUserHeadImg', this.personalData.user_Img)
         })
         .catch(err => {
@@ -344,7 +344,7 @@ export default {
     position: absolute
     width: --header-width
     height: --header-height
-    background-image: linear-gradient($bgColorSecond,$bgColorFifth)
+    background-image: linear-gradient($bgColorSecond,$bgColorFourth)
     border-bottom-left-radius: --header-height
     border-bottom-right-radius: --header-height
     box-shadow: 0 .3rem 1rem $bgColorSecond;
@@ -431,7 +431,7 @@ export default {
   bottom 0
   left 0
   right 0
-  background-image: linear-gradient(red, #f36c5e)
+  background-image: linear-gradient(#d3f5f2, #7196b1)
   .out
     width: 100%
     height: 1rem
@@ -451,7 +451,7 @@ export default {
     width: 100%
     height: 3.5rem
     .personal-setUp-title
-      background: #f5bebe
+      background: #71c5ea
       height: 1rem
       line-height: 1rem
       text-align: center

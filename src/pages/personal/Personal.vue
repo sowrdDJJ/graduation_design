@@ -70,7 +70,6 @@ export default {
     getPersonalData () {
       this.$store.dispatch('user/getUserCommodityInfo', '/getUserColloection')
         .then((resulte) => {
-          // this.collectionList
           this.collectionList = resulte
         })
         .catch((err) => {

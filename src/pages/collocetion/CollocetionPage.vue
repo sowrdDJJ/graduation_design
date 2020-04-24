@@ -30,18 +30,21 @@ export default {
   },
   methods: {
     getCityInfo () {
-      this.$store.dispatch('user/getUserOrderInfo', {
-        url: '/getUserColloection',
-        params: {
-          commodityClass: this.commodityClass
-        }
-      }).then(resulte => {
-        if (resulte.length !== 0 && resulte) {
-          this.colloectionTitle = resulte[0].commodity_Class
-          console.log(resulte)
-          this.commodityList = resulte
-        }
-      })
+      if (this.commodityClass) {
+        this.$store.dispatch('user/getUserOrderInfo', {
+          url: '/getUserColloection',
+          params: {
+            commodityClass: this.commodityClass
+          }
+        }).then(resulte => {
+          if (resulte.length !== 0 && resulte) {
+            this.colloectionTitle = resulte[0].commodity_Class
+            this.commodityList = resulte
+          }
+        })
+      } else {
+        this.$router.go(-1)
+      }
     },
     commodityNumberComputed (letter) {
       this.commodityList = this.commodityList.map((e) => {

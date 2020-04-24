@@ -169,7 +169,7 @@ export default {
           base += 1
         }
       })
-      toalHeight = base * 2.1
+      toalHeight = base * 2.1 + 1
       return toalHeight
     }
   },

@@ -64,7 +64,7 @@ export default {
     },
     getCommodityDataSucc (res) {
       if (res && res.length !== 0) {
-        this.commodityInformation = res
+        this.commodityInformation.push(res)
         Bus.$emit('commodityInformation', this.commodityInformation)
       } else {
         this.$toast.fail('该商品已下架')

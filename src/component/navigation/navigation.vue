@@ -71,7 +71,8 @@ export default {
     },
     judgeMoveTag (object) {
       let matching = null
-      if (object === '/user/personal' || object.indexOf('/user/Order') !== -1) {
+      const personal = ['/user/personal', '/user/CollocetionPage', '/user/ShoppingCar', '/user/Order/OrderPay', '/user/Order/OrderReceiv', '/user/Order/OrderEvaluate']
+      if (personal.indexOf(object) !== -1) {
         matching = this.navigationList[2].name
       } else if (object === '/user/Dialogue') {
         matching = this.navigationList[1].name
@@ -118,6 +119,7 @@ export default {
   bottom: 0
   height: 1.1rem
   width: 7.5rem
+  line-height: .5rem
   background: $bgColorSecond
   border-radius: .2rem .2rem 0 0
   .navigation-title
@@ -126,7 +128,6 @@ export default {
     width: 2.475rem
     height: 1.1rem
     padding-top: .1rem
-    line-height: 0.4rem
     text-align: center
     .navigation-title-content
       color: #fff

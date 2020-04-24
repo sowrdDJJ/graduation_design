@@ -9,9 +9,9 @@
             </div>
             <div class="register-btn-box">
               <div class="register-btn">
-                  <router-link to="register" class="btn-content" >
+                  <!-- <router-link to="register" class="btn-content" >
                       注册
-                  </router-link>
+                  </router-link> -->
               </div>
             </div>
           </header>

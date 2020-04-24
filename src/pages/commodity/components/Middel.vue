@@ -372,7 +372,7 @@ export default {
         position: relative
         width: 85%
         height: 1.3rem
-        color: white
+        color: $bgColorFourth
         font-size: .4rem
         font-weight: 400
         border-radius: .1rem
@@ -439,7 +439,7 @@ export default {
         width: 100%
         height: 1rem
         background: $bgColorThird
-        color: #fff
+        color: #bbb
         text-align: center
         line-height: 1rem
       .commodity-conllection

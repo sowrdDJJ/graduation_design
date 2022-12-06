@@ -24,7 +24,7 @@
     "popper.js": "^1.16.0",
     "postcss-pxtorem": "^4.0.1",
     "px2rem-loader": "^0.1.9",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "reset-css": "^5.0.1",
     "socket.io-client": "^2.3.0",
     "stylus": "^0.54.7",
